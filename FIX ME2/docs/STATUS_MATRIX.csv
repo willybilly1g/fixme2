@@ -1,0 +1,23 @@
+Chapter,Area,State,Implemented evidence,Remaining production work
+01,Architecture,PARTIAL,Modular projects and core types,Complete hardware lifecycle
+02,CPU/PAL,PARTIAL,CPUID Intel AMD vendor and flags,Privileged MSR and operational PAL
+03,Allocator,PARTIAL,Callback allocated aligned synthetic page pool,WDK physical allocator and ownership
+04,Paging,PASS_OFFLINE,Four levels Intel EPT AMD NPT 4KiB/2MiB,Hardware reserved bit capability validation
+05,Split engine,PASS_OFFLINE,512 4KiB mappings rollback and protect,Live translation synchronization
+06,TLB invalidation,NOT_IMPLEMENTED,None,Hardware INVEPT and AMD flush
+07,Multicore,OFFLINE_MODEL,Generation ack simulation,IPI and race safe reclamation
+08,VM Exit,OFFLINE_ROUTER,Typed events fail closed callbacks,Assembly trampoline and CPU-state preservation
+09,Lifecycle,PARTIAL,Offline address space init destroy,VMX/SVM lifecycle rollback
+10,Input and rendering,PARTIAL,Visible Win32 GDI box and process reader interface,GUI Windows integration tests
+11,DOD/POD/PAL,PARTIAL,No STL new delete or virtual functions,Cache and workload profiling
+12,Error handling,PARTIAL,Explicit status rollback validation,Windows error injection hardware recovery
+13,Tests,PARTIAL,Portable 707 checks including ASan and UBSan,Windows WDK and hardware stress tests
+14,Integration,PARTIAL,VS2022 solution references,Integrate user's existing project when supplied
+15,Production outcome,NOT_PROVEN,Source and docs delivered,Release gates G2-G6
+16,End to end validation,NOT_PROVEN,Offline tests and Win32 demo source,Intel AMD VM exit and BSOD campaign
+17,Windows process reader,SOURCE_IMPLEMENTED_WINDOWS_UNTESTED,New HvProcessManager CLI GUI and Windows regression tests,MSVC build Windows 10/11 and authorization tests
+18,OurCuteGame integration,SOURCE_IMPLEMENTED_WINDOWS_UNTESTED,HvGameOverlay read-only process DLL window matching plus original-style renderer,Windows VS2022 build actual game and version-specific offsets validation
+19,OurCute geometry,TESTED_PORTABLE,HvGameTests 8 checks on GCC Clang,Windows smoke and frame-time tests
+20,Process introspection,PASS_OFFLINE,HvIntrospection 4-level VA GPA HPA walk backed by HvCore EPT NPT offline map; 4KiB 2MiB 1GiB guest leaves,Privileged target CR3 and hardware physical access unavailable
+21,Unified memory transport,SOURCE_IMPLEMENTED_WINDOWS_UNTESTED,Single read_batch API in HvGameOverlay with HvProcessManager authorized adapter,Live Windows game runtime and MSVC test
+22,Atomic batch validation,PASS_OFFLINE,Caller scratch all-or-nothing commit with generation check across batch,Real SMP consistent snapshot and IPI flush not implemented

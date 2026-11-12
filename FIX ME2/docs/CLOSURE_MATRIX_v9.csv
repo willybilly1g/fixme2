@@ -1,0 +1,8 @@
+"Component","v9 status","Windows verification"
+"Direct Intel VMXON/EPT VMM","NOT IMPLEMENTED","NOT TESTED"
+"Direct AMD SVM VMRUN/NPT VMM","NOT IMPLEMENTED","NOT TESTED"
+"Windows Hypervisor Platform isolated guest execution","SOURCE IMPLEMENTED","NOT TESTED"
+"WHP guest mapping and vCPU lifecycle","SOURCE IMPLEMENTED","NOT TESTED"
+"Guest memory introspection of host game","NOT IMPLEMENTED","NOT TESTED"
+"Existing process reader and box renderer","UNCHANGED FROM v8","NOT TESTED HERE"
+"Per-CPU INVEPT/AMD ASID shootdown","NOT IMPLEMENTED","NOT TESTED"

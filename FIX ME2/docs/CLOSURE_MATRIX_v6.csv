@@ -1,0 +1,7 @@
+Item,State,Implementation,Evidence,Release blocking
+Active VMX/SVM backends,MISSING,none,hardware test not available,YES
+Kernel physical memory layer,MISSING,none,not tested,YES
+Process context,PARTIAL,kernel PID exists check + Win32 handle; no guest CR3,portable protocol test only,YES
+Hardware multicore invalidation,MISSING,offline generation tracker only,hardware test not available,YES
+Hypervisor shutdown,MISSING,application & diagnostic driver lifecycle only,hardware test not available,YES
+Kernel-to-renderer transport,PARTIAL,versioned bounded diagnostic IOCTL + synthetic render test,portable ABI tests pass / Windows not tested,YES

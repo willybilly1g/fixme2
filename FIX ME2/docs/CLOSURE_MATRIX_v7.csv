@@ -1,0 +1,7 @@
+Component,State,Implementation,Validation,Release blocking
+Intel VMX / AMD SVM execution,MISSING,CPUID capability-only probe,No hardware runtime test,YES
+Kernel physical memory manager,FOUNDATION,One owned 4KiB nonpaged kernel page; physical alignment checked; no arbitrary physical read,WDK runtime NOT TESTED,YES
+Process/guest context,PARTIAL,Kernel PID lookup balanced by dereference; user-mode HANDLE reader; no guest CR3,Runtime NOT TESTED,YES
+Multi-core invalidation,FOUNDATION,KeIpiGenericCall diagnostic acknowledgments; no INVEPT/NPT flush,WDK runtime NOT TESTED,YES
+Hypervisor shutdown,MISSING,Driver lifecycle and private page cleanup only; no active VMM to shut down,WDK runtime NOT TESTED,YES
+Kernel-render transport,PARTIAL,Versioned IOCTL diagnostic and synthetic rectangle; game data remains user-mode reader,Portable protocol 25/25,YES

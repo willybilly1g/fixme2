@@ -1,0 +1,10 @@
+Component,Implementation_v8,Validation,Limitation
+Moving box renderer,implemented standalone and kernel-stream,portable protocol tests passed,Windows runtime not tested
+Kernel to renderer moving objects,admin-only fixed-frame IOCTL + cached frame + user-mode client,protocol 57 PASS,Windows WDK not tested
+Existing EXE/DLL normal overlay,existing Windows read-only pipeline with optional kernel relay,not live tested,requires authorized access and valid offsets
+Active Intel VMX/EPT,NOT IMPLEMENTED,NOT TESTED,CPU feature probe only
+Active AMD SVM/NPT,NOT IMPLEMENTED,NOT TESTED,CPU feature probe only
+Kernel physical memory reads,NOT IMPLEMENTED,NOT TESTED,owned page allocation only
+Guest CR3 capture,NOT IMPLEMENTED,NOT TESTED,host PID/HANDLE available
+Hardware multicore invalidation,NOT IMPLEMENTED,NOT TESTED,diagnostic IPI only
+Hypervisor teardown,NOT IMPLEMENTED,NOT TESTED,driver unload implemented
